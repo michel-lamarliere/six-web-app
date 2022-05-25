@@ -1,0 +1,74 @@
+@import '../../style/variables.scss';
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	width: 18rem;
+}
+
+.input {
+	position: relative;
+
+	&__input {
+		width: 100%;
+		padding: 0.7rem;
+		border-radius: 0.5rem;
+		color: $colorWhite;
+		font-family: $fontRegular;
+		font-size: 16px;
+		box-sizing: border-box;
+		resize: none;
+
+		&--password {
+			padding-right: 3rem;
+		}
+
+		&--purple {
+			border: 0.1rem solid $colorPurple2;
+			background-color: $colorPurple2;
+
+			&::placeholder {
+				color: $colorLavender;
+				opacity: 1;
+			}
+		}
+
+		&--black {
+			border: 0.1rem solid transparent;
+			background-color: #24263d;
+
+			&::placeholder {
+				color: $colorWhite;
+				opacity: 0.5;
+			}
+		}
+
+		&:focus {
+			outline: none;
+		}
+
+		&--invalid {
+			border: solid 0.1rem $colorBlue1;
+			color: $colorBlue1;
+		}
+	}
+
+	&__show-password {
+		position: absolute;
+		right: 0.5rem;
+		top: 50%;
+		transform: translateY(-50%);
+		background: none;
+
+		&--open {
+			right: 0.66rem;
+			top: 46%;
+		}
+	}
+}
+
+.error-text {
+	font-family: $fontMedium;
+	font-size: 12px;
+	color: $colorBlue1;
+}

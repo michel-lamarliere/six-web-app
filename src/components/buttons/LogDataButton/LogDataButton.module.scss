@@ -1,0 +1,71 @@
+@import '../../../style/variables.scss';
+
+.wrapper {
+	position: relative;
+	display: flex;
+	align-items: flex-end;
+	width: 1.5rem;
+	height: 1.5rem;
+	border: 0.125rem solid $colorBlue1;
+	box-sizing: content-box;
+	border-radius: 50%;
+	overflow: hidden;
+	background-color: transparent;
+	cursor: pointer;
+
+	&--disabled {
+		background-color: $colorGrey1;
+		border: 0.125rem solid $colorGrey2;
+		cursor: default;
+
+		& > .button__day-number {
+			color: $colorGrey2;
+		}
+	}
+}
+
+.button {
+	position: absolute;
+	background-color: transparent;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+
+	&:active {
+	}
+
+	&__filling {
+		width: 100%;
+		border: none;
+		overflow: hidden;
+		transition: height 0.3s ease-in-out;
+		cursor: crosshair;
+
+		&--zero {
+			height: 0;
+			background-color: $colorBlue1;
+		}
+
+		&--one {
+			height: 50%;
+			background-color: $colorBlue2;
+		}
+
+		&--two {
+			height: 100%;
+			background-color: $colorBlue1;
+		}
+	}
+
+	&__day-number {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-family: $fontMedium;
+		font-size: 14px;
+		color: $colorWhite;
+		background-color: transparent;
+		cursor: crosshair;
+	}
+}

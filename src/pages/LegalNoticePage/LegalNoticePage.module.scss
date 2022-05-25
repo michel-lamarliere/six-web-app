@@ -1,0 +1,53 @@
+@import '../../style/variables.scss';
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin: $marginTopMobile $marginSidesMobile;
+}
+
+.title {
+	font-family: $fontBold;
+	font-size: 24px;
+	color: $colorLavender;
+	text-align: center;
+}
+
+.heading {
+	font-family: $fontSemiBold;
+	font-size: 18px;
+	color: $colorLavender;
+}
+
+.subheading {
+	font-family: $fontMedium;
+	font-size: 14px;
+	color: $colorLavender;
+}
+
+.paragraph {
+	font-family: $fontRegular;
+	font-size: 12px;
+	color: $colorWhite;
+}
+
+@media screen and (min-width: 700px) {
+	.wrapper {
+		width: 70%;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.wrapper {
+		width: 50%;
+		gap: 1rem;
+	}
+
+	.heading {
+	}
+
+	.paragraph {
+		font-size: 14px;
+	}
+}

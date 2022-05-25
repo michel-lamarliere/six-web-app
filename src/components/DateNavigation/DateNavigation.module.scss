@@ -1,0 +1,43 @@
+@import '../../style/variables.scss';
+
+.wrapper {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1.85rem;
+	width: 20rem;
+	margin-top: 2rem;
+	font-family: $fontBold;
+	color: $colorLavender;
+	text-align: center;
+}
+
+.text {
+	font-family: $fontBold;
+	font-size: 16px;
+}
+
+.button {
+	position: absolute;
+	display: grid;
+	place-content: center;
+	background: none;
+	cursor: pointer;
+
+	&--left {
+		left: 1rem;
+
+		&--annual-chart {
+			left: 6rem !important;
+		}
+	}
+
+	&--right {
+		right: 1rem;
+
+		&--annual-chart {
+			right: 6rem;
+		}
+	}
+}

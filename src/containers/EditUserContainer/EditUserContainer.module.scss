@@ -1,0 +1,51 @@
+@import '../../style/variables.scss';
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 3rem;
+	width: 100%;
+	margin: $marginTopMobile $marginSidesMobile 0 $marginSidesMobile;
+}
+
+.title {
+	font-family: $fontBold;
+	font-size: 22px;
+	color: $colorLavender;
+}
+
+.back-button {
+	position: absolute;
+	top: 2.4rem;
+	left: 2rem;
+}
+
+.submit-button {
+	background-color: $colorPurple1;
+	color: $colorWhite;
+
+	&:hover {
+		background-color: $colorWhite;
+		color: $colorPurple1;
+	}
+}
+
+.response {
+	color: $colorWhite;
+	text-align: center;
+	font-size: 16px;
+}
+
+@media screen and (min-width: 1200px) {
+	.wrapper {
+		position: relative;
+		max-width: 20rem;
+		margin: $marginTopDesktop 2rem;
+	}
+
+	.back-button {
+		top: -4.5rem;
+		left: 0;
+	}
+}
